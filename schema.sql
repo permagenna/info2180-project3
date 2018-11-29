@@ -4,6 +4,7 @@ use schema;
 CREATE table Users(id INT UNSIGNED NOT NULL PRIMARY KEY,
                    first_name varchar(50),
                    last_name varchar(50),
+                   password varchar(50));
                    telephone INT(10),
                    email varchar(50),
                    date_joined DATE
