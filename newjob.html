@@ -13,30 +13,31 @@
 		<div class="web">HireMe</div>
 		<div class = "grid">
 			<section class="left">
-				<img  id="home" class="logo" src="home.jpg" <p id = "homebut" class = "info">Home</p>
-				<img  id="adduser" class="logo" src="adduser.jpg" <p id = "addbut"class = "info">Add User</p>
-				<img  id="newjob" class="logo" src="newjob.jpg" <p id = "newbut"class = "info">New Job</p>
-				<img  id="logout" class="logo" src="logout.jpg" <p id = "outbut"class = "info">Log Out</p>
+				<a  href="dashboard.html" ><img  id="home" class="logo" src="home.jpg"> Home</a>	<br><br>
+				<a  href="newuser.html" ><img  id="adduser" class="logo" src="adduser.jpg"> Add User</a>	<br><br>
+				<a  href="newjob.html" ><img  id="newjob" class="logo" src="newjob.jpg"> New Job</a>	<br><br>
+				<a  href="logout.php" ><img  id="logout" class="logo" src="logout.jpg"> Log Out</a>
 			</section>
 			<section class="right">
 				<div class="signup">
-        			<form>
+        			<form method="post" action="newjob.php">
         				<h1> New Job</h1>
 		                <legend><strong>Job Title</strong></legend>
-		                <input id="jobtitle" class = "detail" type="text" placeholder="e.g. Senior Designer or Product Manager" required>
+		                <input id="jobtitle" name="jobtitle" class = "detail" type="text" placeholder="e.g. Senior Designer or Product Manager" required>
 		                <legend><strong>Job Description</strong></legend>
-		                <input id="jobdescription" class = "detail1" type="text"  required>			                 
+		                <input id="jobdescription" name="jobdescription" class = "detail1" type="text"  required>			                 
 		                <legend><strong>Category</strong></legend>
-		                <select id="password" class = "detail" required>
+		                <select id="category" name="category" class = "detail" required>
 		                	<option value="" disabled selected>Select a category</option>
-		                	<option value = "optionA">OptionA</option>
-		                	<option value = "optionB">OptionB</option>
-		                	<option value = "optionC">OptionC</option>
+		                	<option value = "Computer Science">Computer Science</option>
+		                	<option value = "Business">Business</option>
+		                	<option value = "Psychology">Psychology</option>
+		                	<option value = "Other">Other</option>
 		                </select>
 		                <legend><strong>Company</strong></legend>
-		                <input id="company" class = "detail" type="text" required>
+		                <input id="company" name="company" class = "detail" type="text" required>
 		                <legend><strong>Job Location</strong></legend>
-		                <input id="joblocation" class = "detail" type="text" placeholder="e.g Kingston, Jamaica"  required>
+		                <input id="joblocation" name="joblocation" class = "detail" type="text" placeholder="e.g Kingston, Jamaica"  required>
 		                <br><br>
 		                <input id="submit" class = "submit" type="submit" value="Submit" class="button">
 		                

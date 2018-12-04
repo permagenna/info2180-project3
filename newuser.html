@@ -13,25 +13,27 @@
 		<div class="web">HireMe</div>
 		<div class = "grid">
 			<section class="left">
-				<img  id="home" class="logo" src="home.jpg" <p id = "homebut" class = "info">Home</p>
-				<img  id="adduser" class="logo" src="adduser.jpg" <p id = "addbut"class = "info">Add User</p>
-				<img  id="newjob" class="logo" src="newjob.jpg" <p id = "newbut"class = "info">New Job</p>
-				<img  id="logout" class="logo" src="logout.jpg" <p id = "outbut"class = "info">Log Out</p>
+				<a  href="dashboard.html" ><img  id="home" class="logo" src="home.jpg"> Home</a>	<br><br>
+				<a  href="newuser.html" ><img  id="adduser" class="logo" src="adduser.jpg"> Add User</a>	<br><br>
+				<a  href="newjob.html" ><img  id="newjob" class="logo" src="newjob.jpg"> New Job</a>	<br><br>
+				<a  href="logout.php" ><img  id="logout" class="logo" src="logout.jpg"> Log Out</a>
 			</section>
 			<section class="right">
 				<div class="signup">
-        			<form>
+        			<form method="post" action="newuser.php">
         				<h1> New User</h1>
 		                <legend><strong>Firstname</strong></legend>
-		                <input id="firstName" class = "detail" type="text" required>
+		                <input id="firstName" class = "detail" type="text" name="firstName" required>
 		                <legend><strong>Lastname</strong></legend>
-		                <input id="lastName" class = "detail" type="text"  required>			                 
+		                <input id="lastName" class = "detail" type="text"  name="lastName" required>			                 
 		                <legend><strong>Password</strong></legend>
-		                <input id="password" class = "detail" type="password" class="textfield" required>
+		                <input id="password" class = "detail" type="password" class="textfield" name = "password" required>
 		                <legend><strong>Email</strong></legend>
-		                <input id="passwordCon" class = "detail" type="email" placeholder="e.g mary.jane@example.com" required>
+		                <input id="email" class = "detail" type="email" name = "email" placeholder="e.g mary.jane@example.com" required>
 		                <legend><strong>Telephone</strong></legend>
-		                <input id="telephone" class = "detail" type="number" placeholder="e.g 876-999-8989"  required>
+		                <input id="telephone" class = "detail" type="number" name = "telephone" placeholder="e.g 876-999-8989"  required>
+		                <legend><strong>Date Joined</strong></legend>
+		                <input id="date_joined" class = "detail" type="date"  name="date_joined" placeholder="e.g 2017-12-20 (yyyy-mm-dd) required>
 		                <br><br>
 		                <input id="submit" class = "submit" type="submit" value="Submit" class="button">
 		                
