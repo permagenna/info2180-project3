@@ -8,12 +8,12 @@
     
     $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
     
-    $sql= "SELECT company_name,job_title,category,date_posted FROM Jobs;";
+    $sql= "SELECT id,company_name,job_title,category,date_posted FROM Jobs;";
     $result= $conn->query($sql);
     
     $test= $result->fetchAll(PDO::FETCH_ASSOC);
+    
      
-     echo'<h3>Available Jobs</h3>';
      echo '<table class=table.';
      echo '<tr>';
      echo '<th>Company</th>';
@@ -22,11 +22,12 @@
      echo '<th>Date </th>';
      echo '<tr>'; 
      foreach($test as $row){
+      
       echo '<tr>';
-      echo '<th>'.$row['company_name'].'</th>';
-      echo '<th>'.'<a href="jobdetails.html">'.$row['job_title'].'</a></th>';
-      echo '<th>'.$row['category'].'</th>';
-      echo '<th>'.$row['date_posted'].'</th>';
+      echo '<td>'.$row['company_name'].'</td>';
+      echo '<td>'.'<a href="jobdetails.html">'.$row['job_title'].'</a></td>';
+      echo '<td>'.$row['category'].'</td>';
+      echo '<td>'.$row['date_posted'].'</td>';
       echo '<tr>';
       
       

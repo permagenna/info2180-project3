@@ -33,6 +33,7 @@ CREATE table Jobs_applied_for(id INT UNSIGNED NOT NULL PRIMARY KEY auto_incremen
 
 
 INSERT INTO Users(first_name,last_name,password,telephone,email,date_joined) VALUES("Perma","Genna","password123","1999-888-7654","admin@hireme.com","2017-11-01");
+INSERT INTO Users(first_name,last_name,password,telephone,email,date_joined) VALUES("Dario","Linton","dari24","1888-777-6666","dari@hireme.com","2017-11-21");
 
 INSERT INTO Jobs(job_title,job_description,category,company_name,company_location,date_posted) VALUES("Database Management","Building Database","Computer Science", "4thgenna","Heavendale","2018-08-20");
 INSERT INTO Jobs(job_title,job_description,category,company_name,company_location,date_posted) VALUES("Accounting","Payroll Management","Business", "Mortec","Portmore","2018-07-25");
@@ -41,7 +42,7 @@ INSERT INTO Jobs(job_title,job_description,category,company_name,company_locatio
 INSERT INTO Jobs(job_title,job_description,category,company_name,company_location,date_posted) VALUES("Business Management","Business Manager","Business", "BangaNation","Uptown","2018-01-10");
 
 INSERT INTO Jobs_applied_for(job_id,user_id,date_applied) VALUES(1,1,"2018-01-11");
+INSERT INTO Jobs_applied_for(job_id,user_id,date_applied) VALUES(2,2,"2018-01-11");
 INSERT INTO Jobs_applied_for(job_id,user_id,date_applied) VALUES(3,1,"2018-01-11");
-INSERT INTO Jobs_applied_for(job_id,user_id,date_applied) VALUES(1,1,"2018-01-11");
-INSERT INTO Jobs_applied_for(job_id,user_id,date_applied) VALUES(3,1,"2018-01-11");
-INSERT INTO Jobs_applied_for(job_id,user_id,date_applied) VALUES(2,1,"2018-01-11");
+INSERT INTO Jobs_applied_for(job_id,user_id,date_applied) VALUES(4,3,"2018-01-11");
+INSERT INTO Jobs_applied_for(job_id,user_id,date_applied) VALUES(5,2,"2018-01-11");

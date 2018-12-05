@@ -8,22 +8,27 @@
     
     $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
     
-    $emails = $conn->query('SELECT email FROM Users;');
+    $collect = $_POST['email'];
+    
+    $emails = $conn->query("SELECT email FROM Users WHERE email LIKE '%$collect';");
     $results = $emails->fetch(PDO::FETCH_ASSOC);
+    
+  
     
     $try= $results['email'] ;
     
-    $passwords = $conn->query('SELECT password FROM Users;');
+    $passwords = $conn->query("SELECT password FROM Users WHERE email LIKE '%$collect';");
     $result = $passwords->fetch(PDO::FETCH_ASSOC);
     
     $pass= $result['password'] ;
-    $_SESSION['email']=$try;
+    
     
     if (!empty($_POST['email'])  && !empty($_POST['password'])) {
 				
         if ($_POST['email'] === $try && $_POST['password'] == $pass) {
             $_SESSION['valid'] = true;
             $_SESSION['username'] = $_POST['email'];
+            $_SESSION['email']= $_POST['email'];
             echo 'You have entered valid use name and password';
             header("location: dashboard.html");
         }else {
